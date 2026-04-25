@@ -39,10 +39,9 @@ while True:
             count = 0
             number = np.random.randint(0,101)
             continue
-        print("Bye~")
         break
+print("Bye~")
 
 
 
-
-#最高十次猜数字次数   重开✓    记录最快✓ 
+#最高十次猜数字次数✓   重开✓    记录最快✓ 
