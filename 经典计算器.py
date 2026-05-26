@@ -8,14 +8,13 @@ def delete(x,y):
     return x-y
 def multiply(x,y):
     return x*y
-def divide (x,y):
+def divide(x,y):
     if y == 0:
         raise ValueError("除数不能为零")
     return x/y
 
 def calculator():
     result = 0
-    status = 0
     print("Welcome welcome welcome, this is a REALLY simple calculator! So let's go!")
 
     while True:
