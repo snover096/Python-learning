@@ -4,8 +4,9 @@ import ollama # 导入 ollama 库
 
 def scrape_quotes(url):
     count = 0
-    maxCount = 10
-    goodurl = f"{url}".rstrip('/')
+    maxCount = 5
+    if f"{url}".endswith('/'): goodurl = f"{url}".rstrip('/')
+    else: goodurl = url
     all_quotes = ""
 
     headers = {'User-Agent': 'Mozilla/5.0'}
