@@ -1,0 +1,130 @@
+# ==========================================
+# AI Agent 专用的文件扫描忽略模板 (.aiderignore)
+# ==========================================
+
+# ------------------------------------------
+# 1. 深度依赖与包管理（绝对不要让 Agent 扫描，体积巨大）
+# ------------------------------------------
+node_modules/
+bower_components/
+.pnp/
+.pnp.js
+pacman/
+
+# Python 虚拟环境与缓存
+venv/
+.venv/
+env/
+.env/
+ENV/
+pyenv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ruby / Rust / Go / Java 依赖与编译产物
+.bundle/
+vendor/
+target/
+.cargo/
+pkg/
+bin/
+obj/
+out/
+*.jar
+*.war
+*.class
+
+# ------------------------------------------
+# 2. 敏感数据与凭据（防止 Agent 读取并意外上传或写入上下文）
+# ------------------------------------------
+.env*.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
+*.secret
+*.token
+*.passwd
+credentials.json
+htpasswd
+.git/
+.hg/
+.svn/
+
+# ------------------------------------------
+# 3. 大型媒体文件与二进制数据（Agent 无法有效阅读，极度消耗 Token）
+# ------------------------------------------
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.mp3
+*.wav
+*.flac
+*.zip
+*.tar
+*.gz
+*.rar
+*.7z
+*.pdf
+*.exe
+*.dll
+*.so
+*.dylib
+*.dmg
+*.iso
+
+# ------------------------------------------
+# 4. 设计资产与大型图片（如需让 Agent 看图，建议手动指定，不要盲目扫描）
+# ------------------------------------------
+*.psd
+*.ai
+*.sketch
+*.fig
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.ico
+*.svg
+*.webp
+
+# ------------------------------------------
+# 5. IDE 配置、日志与临时文件
+# ------------------------------------------
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*~
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.eslintcache
+.DS_Store
+Thumbs.db
+
+# ------------------------------------------
+# 6. 构建产物与数据文件
+# ------------------------------------------
+dist/
+build/
+out/
+.next/
+.nuxt/
+.docusaurus/
+*.db
+*.sqlite
+*.sqlite3
+*.csv
+*.xlsx
