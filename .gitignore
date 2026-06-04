@@ -1,0 +1,114 @@
+# ==========================================
+# 个人通用开发 .gitignore 模板
+# ==========================================
+
+# ------------------------------------------
+# 1. 敏感数据与凭据（绝对不能提交，防止泄露）
+# ------------------------------------------
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
+*.secret
+*.token
+*.passwd
+*credentials*.json
+.cookie
+
+# ------------------------------------------
+# 2. 系统与编辑器缓存垃圾（因人而异的文件，无需同步）
+# ------------------------------------------
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# VS Code
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+
+# ------------------------------------------
+# 3. 前端与 Node.js 依赖及构建产物
+# ------------------------------------------
+node_modules/
+/dist/
+/build/
+.out/
+.next/
+.nuxt/
+.docusaurus/
+.pnp/
+.pnp.js
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.eslintcache
+.stylelintcache
+
+# ------------------------------------------
+# 4. Python 虚拟环境与缓存
+# ------------------------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.poetry.lock
+poetry.lock
+
+# ------------------------------------------
+# 5. 二进制编译产物与重型依赖 (C++ / Rust / Go / Java)
+# ------------------------------------------
+# Rust
+/target/
+
+# Go
+/bin/
+/pkg/
+
+# Java / C#
+*.class
+*.jar
+*.war
+*.exe
+*.dll
+*.so
+*.dylib
+bin/
+obj/
+
+# ------------------------------------------
+# 6. 大型多媒体与本地数据库（避免撑爆 Git 仓库）
+# ------------------------------------------
+*.mp4
+*.avi
+*.mov
+*.mp3
+*.zip
+*.tar
+*.gz
+*.rar
+*.7z
+*.iso
+*.dmg
+
+# 数据库
+*.db
+*.sqlite
+*.sqlite3
+*.log
