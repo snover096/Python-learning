@@ -14,7 +14,7 @@ Installed globally/ambient. No `requirements.txt`, `pyproject.toml`, or lockfile
 
 - `numpy` (HelloWorld, GuessNumber)
 - `requests`, `beautifulsoup4` (scrapers)
-- `openai` (scraper_ai — local LLM at `localhost:1234`)
+- `openai`, `ollama` (scraper_ai — local LLM at `localhost:1234`; both are imported at module top, so the script won't import without either)
 - `customtkinter` (NoteApp GUI)
 
 ## Python version
@@ -29,6 +29,12 @@ Installed globally/ambient. No `requirements.txt`, `pyproject.toml`, or lockfile
 | `小玩意儿~/` | Small tools (calculator, guess number, password gen, file organizer) |
 | `Scraper爬？/` | Web scrapers (Douban Top250, Google Search, basic, AI-powered) |
 | `NoteApp/` | CustomTkinter GUI memo app (persists to `data.json`) |
+
+## Runtime side effects
+
+- `scraper_ai.py` writes `quotes.txt` to the CWD; `douban_top250.py` writes CSV/JSON output
+- `NoteApp/app.py` persists to `data.json` next to the script (or beside the exe when frozen)
+- These are runtime-generated — don't commit them or treat them as source files
 
 ## Toolchain
 
