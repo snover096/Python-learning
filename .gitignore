@@ -15,6 +15,7 @@
 *.secret
 *.token
 *.passwd
+htpasswd
 *credentials*.json
 .cookie
 
@@ -28,19 +29,31 @@ ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 
+# macOS / Linux
+.DS_Store
+
 # VS Code
 .vscode/*
 !.vscode/extensions.json
 !.vscode/launch.json
 !.vscode/settings.json
 
+# JetBrains (PyCharm / IntelliJ)
+.idea/
+
+# 编辑器临时文件
+*.swp
+*~
+
 # ------------------------------------------
 # 3. 前端与 Node.js 依赖及构建产物
 # ------------------------------------------
 node_modules/
+bower_components/
 /dist/
 /build/
 .out/
+out/
 .next/
 .nuxt/
 .docusaurus/
@@ -61,6 +74,7 @@ __pycache__/
 *.pyo
 *.pyd
 .Python
+pyenv/
 env/
 venv/
 .venv/
@@ -76,6 +90,8 @@ poetry.lock
 # ------------------------------------------
 # Rust
 /target/
+vendor/
+.cargo/
 
 # Go
 /bin/
@@ -93,12 +109,15 @@ bin/
 obj/
 
 # ------------------------------------------
-# 6. 大型多媒体与本地数据库（避免撑爆 Git 仓库）
+# 6. 大型多媒体、图片与本地数据库（避免撑爆 Git 仓库）
 # ------------------------------------------
 *.mp4
 *.avi
 *.mov
+*.mkv
 *.mp3
+*.wav
+*.flac
 *.zip
 *.tar
 *.gz
@@ -106,9 +125,28 @@ obj/
 *.7z
 *.iso
 *.dmg
+*.pdf
+
+# 设计资源与图片
+*.psd
+*.ai
+*.sketch
+*.fig
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.ico
+*.svg
+*.webp
 
 # 数据库
 *.db
 *.sqlite
 *.sqlite3
 *.log
+
+# ------------------------------------------
+# 7. 脚本运行时生成产物（不提交）
+# ------------------------------------------
+
